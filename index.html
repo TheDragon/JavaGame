@@ -3,11 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Play-Station</title>
+    <link rel="icon" sizes="48x48" type="image/png" href="./assets/image/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
   </head>
+  <style>
+    body {
+      background-color: rgb(255, 255, 255);
+      background-image: url("./assets/image/background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .glow {
+      font-family: Doto;
+      font-size: 80px;
+      color: #fff;
+      text-align: center;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00cbe6, 0 0 40px #00cbe6, 0 0 50px #00cbe6, 0 0 60px #00cbe6, 0 0 70px #00cbe6;
+      }
+
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff, 0 0 80px #fff;
+      }
+    }
+    .logo {
+      position: absolute;
+      height: 100px;
+      left: 10rem;
+    }
+    .container {
+      margin-top: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      .card {
+        margin: 50px 50px;
+        padding: 100px 120px;
+        border-radius: 45px;
+        transition: 200ms ease-in-out;
+        p {
+          font-family: Sour Gummy;
+          font-size: 50px;
+          color: #fff;
+        }
+        .game_img {
+          border-radius: 50%;
+          height: 15rem;
+          width: 15rem;
+        }
+        button {
+          color: #fff;
+          border: none;
+          background: rgba(225, 225, 225, 0.2);
+          margin-top: 10px;
+          font-size: 25px;
+          box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+          transition: 200ms ease-in-out;
+          text-align: center;
+          border-radius: 45px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          margin-left: 20px;
+          padding: 10px 20px;
+          img {
+            width: 50px;
+            margin-right: 10px;
+          }
+        }
+        button:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+          background: rgba(225, 225, 225, 0.4);
+        }
+      }
+      .card:hover {
+        margin-top: -1px;
+      }
+    }
+    footer {
+      color: white;
+      text-align: center;
+      font-size: 24px;
+      margin-top: 7rem;
+    }
+  </style>
   <body>
-    <p>Game Click Here</p>
-    <a href="./FallBall.html"> FallBall Game</a>
-    <a href="./PongGame.html"> Pong Game</a>
+    <img src="./assets/image/favicon.png" alt="" class="logo" />
+    <h1 class="glow">Play-Station</h1>
+    <div class="container">
+      <div class="card" style="background: #8000ff; background: -webkit-linear-gradient(to right, #8000ff, #6e0299); background: linear-gradient(to right, #ab03ed, #53016e); box-shadow: 0 3px 7px #8000ff">
+        <img src="./assets/image/fall.jpg" alt="" class="game_img" />
+        <p>Fall Ball</p>
+        <a href="./FallBall.html"
+          ><button><img src="./assets/image/play.svg" alt="" /> Play Now</button></a
+        >
+      </div>
+      <div class="card" style="background: #f600fb; background: -webkit-linear-gradient(to right, #cf2ed2, rgb(168, 3, 83)); background: linear-gradient(to right, #bb22bd, #6a006b); box-shadow: 0 3px 7px #6a006b">
+        <img src="./assets/image/pong.png" alt="" class="game_img" />
+        <p>Pong Game</p>
+        <a href="./PongGame.html"
+          ><button><img src="./assets/image/play.svg" alt="" /> Play Now</button></a
+        >
+      </div>
+      <div class="card" style="background: #052598; background: -webkit-linear-gradient(to right, #031864, #052598); background: linear-gradient(to right, #052598, #3a62f3); box-shadow: 0 3px 7px #052598">
+        <img src="./assets/image/snake.png" alt="" class="game_img" />
+        <p>Snake Game</p>
+        <a href="./Snake.html"
+          ><button><img src="./assets/image/play.svg" alt="" /> Play Now</button>
+        </a>
+      </div>
+    </div>
+    <footer>
+      <p>© Copyright Play-Station - 2024</p>
+    </footer>
   </body>
 </html>

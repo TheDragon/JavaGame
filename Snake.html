@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CheerpJ test</title>
+    <script src="https://cjrtnc.leaningtech.com/3.0/cj3loader.js"></script>
+    <link rel="icon" sizes="48x48" type="image/png" href="./assets/image/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url("./assets/image/background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .glow {
+      font-family: Doto;
+      font-size: 80px;
+      color: #fff;
+      text-align: center;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00cbe6, 0 0 40px #00cbe6, 0 0 50px #00cbe6, 0 0 60px #00cbe6, 0 0 70px #00cbe6;
+      }
+
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff, 0 0 80px #fff;
+      }
+    }
+    .logo {
+      position: absolute;
+      height: 100px;
+      top: 70px;
+      left: 10rem;
+    }
+    #cheerpjDisplay {
+      margin: 200px 500px;
+    }
+  </style>
+  <body>
+    <img src="./assets/image/favicon.png" alt="" class="logo" />
+    <h1 class="glow">Snake Game</h1>
+    <script>
+      (async function () {
+        await cheerpjInit();
+        cheerpjCreateDisplay(800, 600);
+        await cheerpjRunJar("/app/SnakeGame.jar");
+      })();
+    </script>
+  </body>
+</html>
